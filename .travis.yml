@@ -13,6 +13,6 @@ install:
   - pip install coveralls
   - pip install -e .
 
-script: coverage run --source=django_ladon ./example/manage.py test
+script: cd example && coverage run --source=django_ladon ./manage.py test
 
 after_success: coveralls
