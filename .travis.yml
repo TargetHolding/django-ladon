@@ -10,6 +10,9 @@ env:
 
 install:
   - pip install $DJANGO
+  - pip install coveralls
   - pip install -e .
 
-script: ./example/manage.py test
+script: coverage run --source=django_ladon ./example/manage.py test
+
+after_success: coveralls
