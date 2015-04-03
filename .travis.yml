@@ -9,7 +9,7 @@ env:
   - DJANGO='django>=1.8,<1.9'
 
 install:
-  - pip install django=$DJANGO
+  - pip install $DJANGO
   - pip install -e .
 
 script: ./example/manage.py test
